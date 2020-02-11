@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationActionTracker"
+    app:startDestination="@id/startActionFragment">
+
+    <fragment
+        android:id="@+id/startActionFragment"
+        android:name="ua.onpu.presentation.fragments.StartActionFragment"
+        android:label="fragment_start_action"
+        tools:layout="@layout/fragment_start_action">
+        <action
+            android:id="@+id/actionTimer"
+            app:destination="@id/timerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="ua.onpu.presentation.fragments.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer">
+        <argument
+            android:name="@string/trackedAction"
+            app:argType="ua.onpu.db.entity.Action" />
+    </fragment>
+
+</navigation>

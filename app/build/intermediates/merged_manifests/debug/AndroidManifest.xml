@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ua.onpu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name="ua.onpu.CubeApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <receiver
+            android:name="ua.onpu.bluetooth.BluetoothBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_DEVICE_CONNECTED" />
+                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_DEVICE_DISCONNECTED " />
+                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_CUBE_FACE_DATA_SENT" />
+                <action android:name=".bluetooth.BluetoothBroadcastReceiver.ACTION_SERVICE_STARTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="ua.onpu.presentation.activity.LobbyActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="ua.onpu.bluetooth.BluetoothConnectionService" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="ua.onpu.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

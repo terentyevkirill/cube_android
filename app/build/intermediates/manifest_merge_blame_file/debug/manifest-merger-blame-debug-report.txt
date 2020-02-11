@@ -1,0 +1,121 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ua.onpu"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:6:5-68
+11-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:6:22-65
+12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+12-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:7:5-74
+12-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:7:22-71
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:8:5-79
+13-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:8:22-76
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:9:5-77
+14-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:9:22-74
+15
+16    <uses-feature android:name="android.hardware.bluetooth" />
+16-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:11:5-63
+16-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:11:19-60
+17    <uses-feature
+17-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:12:5-14:35
+18        android:name="android.hardware.bluetooth_le"
+18-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:13:9-53
+19        android:required="true" />
+19-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:14:9-32
+20
+21    <application
+21-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:16:5-47:19
+22        android:name="ua.onpu.CubeApplication"
+22-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:17:9-40
+23        android:allowBackup="false"
+23-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:18:9-36
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.1.0] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\8a292fee6b1ab6d6789f814672f31ef6\core-1.1.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:21:9-43
+27        android:label="@string/app_name"
+27-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:19:9-41
+28        android:supportsRtl="true"
+28-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:20:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:22:9-40
+31        <receiver
+31-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:24:9-34:20
+32            android:name="ua.onpu.bluetooth.BluetoothBroadcastReceiver"
+32-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:25:13-65
+33            android:enabled="true"
+33-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:26:13-35
+34            android:exported="false" >
+34-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:27:13-37
+35            <intent-filter>
+35-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:28:13-33:29
+36                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_DEVICE_CONNECTED" />
+36-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:29:17-104
+36-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:29:25-101
+37                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_DEVICE_DISCONNECTED " />
+37-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:30:17-108
+37-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:30:25-105
+38                <action android:name=".bluetooth.BluetoothConnectionService.ACTION_CUBE_FACE_DATA_SENT" />
+38-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:31:17-107
+38-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:31:25-104
+39                <action android:name=".bluetooth.BluetoothBroadcastReceiver.ACTION_SERVICE_STARTED" />
+39-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:32:17-102
+39-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:32:25-100
+40            </intent-filter>
+41        </receiver>
+42
+43        <activity
+43-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:35:9-44:20
+44            android:name="ua.onpu.presentation.activity.LobbyActivity"
+44-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:36:13-64
+45            android:configChanges="orientation"
+45-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:37:13-48
+46            android:screenOrientation="portrait" >
+46-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:38:13-49
+47            <intent-filter>
+47-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:39:13-43:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:40:17-69
+48-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:40:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:42:17-77
+50-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:42:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <service android:name="ua.onpu.bluetooth.BluetoothConnectionService" />
+54-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:46:9-73
+54-->D:\STUDY\ONPU\ProjectSchool\Android\SmartCube\app\src\main\AndroidManifest.xml:46:18-70
+55        <service
+55-->[androidx.room:room-runtime:2.2.0-alpha01] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\8d8b2bc377d5545705b4ce2265c8abbe\room-runtime-2.2.0-alpha01\AndroidManifest.xml:25:9-27:40
+56            android:name="androidx.room.MultiInstanceInvalidationService"
+56-->[androidx.room:room-runtime:2.2.0-alpha01] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\8d8b2bc377d5545705b4ce2265c8abbe\room-runtime-2.2.0-alpha01\AndroidManifest.xml:26:13-74
+57            android:exported="false" />
+57-->[androidx.room:room-runtime:2.2.0-alpha01] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\8d8b2bc377d5545705b4ce2265c8abbe\room-runtime-2.2.0-alpha01\AndroidManifest.xml:27:13-37
+58
+59        <provider
+59-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\a025e8dff41ae52a526c19964402b766\lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:25:9-29:43
+60            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+60-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\a025e8dff41ae52a526c19964402b766\lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:26:13-79
+61            android:authorities="ua.onpu.lifecycle-process"
+61-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\a025e8dff41ae52a526c19964402b766\lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:27:13-69
+62            android:exported="false"
+62-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\a025e8dff41ae52a526c19964402b766\lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:28:13-37
+63            android:multiprocess="true" />
+63-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\kiril\.gradle\caches\transforms-2\files-2.1\a025e8dff41ae52a526c19964402b766\lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:29:13-40
+64    </application>
+65
+66</manifest>

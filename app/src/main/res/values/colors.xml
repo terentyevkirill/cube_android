@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryLight">#59b5ff</color>
+    <color name="textOnPrimary">#808080</color>
+
+    <color name="colorSecondary">#e0beda</color>
+    <color name="colorSecondaryDark">#ae8ea8</color>
+    <color name="colorSecondaryLight">#ffffff</color>
+    <color name="textOnSecondary">#546e7a</color>
+
+    <color name="color_cardView_background">#808080</color>
+
+    <color name="color_cardView_background2">#646464</color>
+    <color name="colorAccent">#D33434</color>
+    <color name="color_Gray">#95FFFFFF</color>
+    <color name="color_Black">#000000</color>
+
+    <color name="dimBackgroundColor">#40000000</color>
+    <color name="brightBackgroundColor">#ffffffff</color>
+    <color name="colorRowSeparator">#cccccc</color>
+    <color name="colorRow">#dddddd</color>
+    <color name="colorRowSep">#eeeeee</color>
+    <color name="filterBackground">#A7A5A5</color>
+    <color name="filterText">#3366cc</color>
+    <color name="bg_splash">#2eddd7</color>
+    <color name="darkText">#000000</color>
+    <color name="item_tracker_action_text">#000000</color>
+    <color name="color_green">#008000</color>
+
+
+
+    <color name="colorPrimary1">#2196f3</color>
+    <color name="colorPrimaryDark1">#1976d2</color>
+    <color name="textOnPrimary1">#808080</color>
+    <color name="colorSecondary1">#e0beda</color>
+    <color name="colorSecondaryDark1">#ae8ea8</color>
+    <color name="colorSecondaryLight1">#ffffff</color>
+    <color name="textOnSecondary1">#546e7a</color>
+    <color name="color_cardView_background1">#808080</color>
+    <color name="color_cardView_background21">#646464</color>
+    <color name="colorLoginError1">#d50000</color>
+    <color name="color_Gray1">#95FFFFFF</color>
+    <color name="color_Black1">#000000</color>
+    <color name="dimBackgroundColor1">#40000000</color>
+    <color name="brightBackgroundColor1">#ffffffff</color>
+    <color name="colorRowSeparator1">#cccccc</color>
+    <color name="filterBackgroun1d">#A7A5A5</color>
+    <color name="filterText1">#3366cc</color>
+    <color name="bg_splash1">#2eddd7</color>
+    <color name="darkText1">#000000</color>
+    <color name="colorYellow">#ffdd00</color>
+    <color name="colorTextDark">#051124</color>
+</resources>

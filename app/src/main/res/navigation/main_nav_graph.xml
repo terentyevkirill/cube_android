@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainNavGraph"
+    app:startDestination="@id/navigationActionTracker">
+
+    <include app:graph="@navigation/action_tracker_nav_graph" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="ua.onpu.presentation.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+
+    <include app:graph="@navigation/settings_nav_graph" />
+
+    <navigation
+        android:id="@+id/navigationAddAction"
+        app:startDestination="@id/actionManagmentFragment" >
+        <fragment
+            android:id="@+id/actionManagmentFragment"
+            android:name="ua.onpu.presentation.fragments.assignToTracker.AssignToTrackerFragment"
+            android:label="fragment_assign_to_tracker"
+            tools:layout="@layout/fragment_assign_to_tracker" >
+            <action
+                android:id="@+id/action_actionManagmentFragment_to_editActionFragment"
+                app:destination="@id/editActionFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/addActionFragment"
+            android:name="ua.onpu.presentation.fragments.assignToTracker.AddActionFragment"
+            android:label="fragment_add_action"
+            tools:layout="@layout/fragment_add_action" />
+        <fragment
+            android:id="@+id/editActionFragment"
+            android:name="ua.onpu.presentation.fragments.assignToTracker.EditActionFragment"
+            android:label="fragment_edit_action"
+            tools:layout="@layout/fragment_edit_action">
+            <argument
+                android:name="@string/goToEditAction"
+                app:argType="ua.onpu.db.entity.Action" />
+        </fragment>
+    </navigation>
+
+</navigation>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRowSep">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addActionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColorHint="@color/color_Black"
+        app:hintEnabled="true"
+        app:hintTextAppearance="@style/BlackTextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addActionNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:singleLine="true"
+            android:textColor="@color/color_Black"
+            android:textSize="16sp"
+            android:theme="@style/BlackTextInputLayout"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/nameAddedActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/color"
+        android:textColor="@color/item_tracker_action_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addActionName" />
+
+    <TextView
+        android:id="@+id/colorRed"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/colorRed2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameAddedActivity"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/colorLoginError1"/>
+
+    <TextView
+        android:id="@+id/colorRed2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/pinkish"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toEndOf="@+id/colorRed"
+        app:layout_constraintTop_toBottomOf="@+id/nameAddedActivity" />
+
+    <TextView
+        android:id="@+id/pinkish"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/colorYellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toEndOf="@+id/colorRed2"
+        app:layout_constraintTop_toBottomOf="@+id/nameAddedActivity"
+        android:background="@color/colorSecondary1" />
+
+    <TextView
+        android:id="@+id/colorYellow"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/pinkish"
+        app:layout_constraintTop_toBottomOf="@+id/nameAddedActivity"
+        android:background="@color/colorYellow" />
+
+    <TextView
+        android:id="@+id/colorBlue"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/colorLightBlue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/colorRed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/filterText"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <TextView
+        android:id="@+id/colorLightBlue"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/green"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/colorRed"
+        app:layout_constraintStart_toEndOf="@+id/colorBlue"
+        android:background="@color/colorPrimaryLight"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <TextView
+        android:id="@+id/green"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/turquoise"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/colorRed"
+        app:layout_constraintStart_toEndOf="@+id/colorLightBlue"
+        android:background="@color/color_green"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <TextView
+        android:id="@+id/turquoise"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/green"
+        app:layout_constraintTop_toBottomOf="@+id/colorRed"
+        android:background="@color/bg_splash"
+        tools:layout_editor_absoluteY="219dp" />
+
+
+    <TextView
+        android:id="@+id/integrationAddedActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/integration"
+        android:textColor="@color/item_tracker_action_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorBlue" />
+
+    <ImageView
+        android:id="@+id/historyActionColorIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/integrationAddedActivity"
+        app:srcCompat="@color/colorPrimaryLight" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_side_of_the_cube"
+        android:textColor="@color/item_tracker_action_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyActionColorIv"
+        app:layout_constraintEnd_toEndOf="@+id/historyActionColorIv"
+        app:layout_constraintStart_toStartOf="@+id/historyActionColorIv"
+        app:layout_constraintTop_toTopOf="@+id/historyActionColorIv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
